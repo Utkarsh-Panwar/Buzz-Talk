@@ -3,8 +3,9 @@ Buzz Talk is a social media application built in Android Studio using Kotlin and
 Xml.The application uses Google Firebase and Cloud Firestore for user authentication.
 Recycler View is used along with Firestore Recycler Adapter to display all the posts in
 an optimized manner. Dispatchers and Co-routines are used to make the app fast and reliable.
-User can share any number of posts after signing in to the app. The posts have a like button 
-next to the user name showing the number of likes on that particular post.
+User can share any number of posts after signing in to the app. The app uses a real time databse
+and the moment a user signs in to the application, user Id and image Url are updated in firebase
+along with the display name.
 
 <h1>Tech Stack:</h1>
 Kotlin, Xml, Firebase, Android Studio

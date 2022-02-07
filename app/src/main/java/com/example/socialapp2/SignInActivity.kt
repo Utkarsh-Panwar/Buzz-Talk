@@ -38,9 +38,6 @@ import kotlinx.coroutines.tasks.await
         super.onCreate(savedInstanceState)
 
         binding= ActivitySignInBinding.inflate(layoutInflater)
-
-
-
         setContentView(binding.root)
 
         // Configure Google Sign In
@@ -64,20 +61,6 @@ import kotlinx.coroutines.tasks.await
              val currentUser = auth.currentUser
              updateUI(currentUser)
          }
-
-//    private fun signIn() {
-//        val signInIntent = googleSignInClient.signInIntent
-//        startActivityForResult(signInIntent, rcSignIn)
-//    }
-//
-//    public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-//        super.onActivityResult(requestCode, resultCode, data)
-//
-//        if (requestCode == rcSignIn) {
-//            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
-//            handleSignInResult(task)
-//        }
-//    }
 
          var resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
              if (result.resultCode == Activity.RESULT_OK) {
